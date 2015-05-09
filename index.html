@@ -14,6 +14,7 @@
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/fractions.js"></script>
 </head>
 <body>
 
@@ -53,45 +54,93 @@
                         <div class="bg-info">EX: <span class="frac"><span class="sup">2</span><span class="sub">3</span> <span class="operator">+</span> <span class="sup">5</span><span class="sub">4</span> <span class="operator"> = </span> <span class="sup">8</span><span class="sub two-dig">12</span> <span class="operator">+</span> <span class="sup">15</span><span class="sub two-dig">12</span> <span class="operator">=</span> <span class="sup two-dig">8 + 15</span><span class="sub three-dig">12</span> <span class="operator"> = </span> <span class="sup">23</span><span class="sub two-dig">12</span></span></div>
                     </div>
                     <div class="panel-footer">
-                      <form id="fractionAddition">
-                          <table class="fraction">
-                              <tr>
-                                  <td>
-                                      <input type="text" class="firstNumerator">
-                                  </td>
-                                  <td class="operator" rowspan="2">
-                                      +
-                                  </td>
+                    <!-- fraction addition -->
+                    <h3>Addition</h3>
+                    <form id="fractionAddition">
+                        <table class="fraction">
+                            <tr>
+                                <td>
+                                    <input type="text" class="firstNumerator">
+                                </td>
+                                <td class="operator" rowspan="2">
+                                    +
+                                </td>
 
-                                  <td>
-                                      <input type="text" class="secondNumerator">
-                                  </td>
-                                  <td class="operator" rowspan="2">
-                                      =
-                                  </td>
-                                  <td>
-                                      <input type="text" class="resultNumerator">
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>
-                                      <input type="text" class="firstDenominator">
-                                  </td>
+                                <td>
+                                    <input type="text" class="secondNumerator">
+                                </td>
+                                <td class="operator" rowspan="2">
+                                    =
+                                </td>
+                                <td>
+                                    <input type="text" class="resultNumerator">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="firstDenominator">
+                                </td>
                                   
-                                  <td>
-                                      <input type="text" class="secondDenominator">
-                                  </td>
+                                <td>
+                                    <input type="text" class="secondDenominator">
+                                </td>
                                   
-                                  <td>
-                                      <input type="text" class="resultDenominator">
-                                  </td>
-                              </tr>
-                          </table>
-                          <button class="btn btn-primary" id="countFrAd">
-                              Check!
-                          </button>
-                          <output class="isPrimeResult"></output>
-                      </form>
+                                <td>
+                                    <input type="text" class="resultDenominator">
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="btn btn-primary" id="countFrAd">
+                            Check!
+                        </button>
+                        <button class="btn btn-danger" class="clearForm">
+                            Clear
+                        </button>
+                    </form>
+
+                    <!-- fraction substraction -->
+                    <h3>Substraction</h3>
+                    <form id="fractionSubtraction">
+                        <table class="fraction">
+                            <tr>
+                                <td>
+                                    <input type="text" class="firstNumerator">
+                                </td>
+                                <td class="operator" rowspan="2">
+                                    -
+                                </td>
+
+                                <td>
+                                    <input type="text" class="secondNumerator">
+                                </td>
+                                <td class="operator" rowspan="2">
+                                    =
+                                </td>
+                                <td>
+                                    <input type="text" class="resultNumerator">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="firstDenominator">
+                                </td>
+                                  
+                                <td>
+                                    <input type="text" class="secondDenominator">
+                                </td>
+                                  
+                                <td>
+                                    <input type="text" class="resultDenominator">
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="btn btn-primary" id="countFrSub">
+                            Check!
+                        </button>
+                        <button class="btn btn-danger" class="clearForm">
+                            Clear
+                        </button>
+                    </form>
                     </div>
                 </div>
             </div>
