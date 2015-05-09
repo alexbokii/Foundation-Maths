@@ -17,6 +17,7 @@
 </head>
 <body>
 
+<!-- prime number -->
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -30,6 +31,63 @@
                       <form id="isPrime">
                           <input type="number">
                           <button class="btn btn-primary">
+                              Check!
+                          </button>
+                          <output class="isPrimeResult"></output>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- fractions -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2>Fractions (addition and substraction of fractions)</h2></div>
+                    <div class="panel-body">
+                        <p>To add or subtract fractions we first rewrire each fraction so that they all have the same denominator(this is known as <span class="text-danger">common denominator</span>). The denominator is chosen to be the lowest common multiple of the original denominators. Then the numerators are added or substracted as apprpriate, and the result is divided by a common denominator.</p>
+                        <!-- <div class="bg-info">EX: <span class="frac"><sup>2</sup>&frasl;<sub>3</sub> + <sup>5</sup>&frasl;<sub>4</sub> = <sup>8</sup>&frasl;<sub>12</sub> + <sup>15</sup>&frasl;<sub>12</sub> = <sup>8 + 15</sup>&frasl;<sub>12</sub>  = <sup>23</sup>&frasl;<sub>12</sub></span></div> -->
+                        <div class="bg-info">EX: <span class="frac"><span class="sup">2</span><span class="sub">3</span> <span class="operator">+</span> <span class="sup">5</span><span class="sub">4</span> <span class="operator"> = </span> <span class="sup">8</span><span class="sub two-dig">12</span> <span class="operator">+</span> <span class="sup">15</span><span class="sub two-dig">12</span> <span class="operator">=</span> <span class="sup two-dig">8 + 15</span><span class="sub three-dig">12</span> <span class="operator"> = </span> <span class="sup">23</span><span class="sub two-dig">12</span></span></div>
+                    </div>
+                    <div class="panel-footer">
+                      <form id="fractionAddition">
+                          <table class="fraction">
+                              <tr>
+                                  <td>
+                                      <input type="text" class="firstNumerator">
+                                  </td>
+                                  <td class="operator" rowspan="2">
+                                      +
+                                  </td>
+
+                                  <td>
+                                      <input type="text" class="secondNumerator">
+                                  </td>
+                                  <td class="operator" rowspan="2">
+                                      =
+                                  </td>
+                                  <td>
+                                      <input type="text" class="resultNumerator">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <input type="text" class="firstDenominator">
+                                  </td>
+                                  
+                                  <td>
+                                      <input type="text" class="secondDenominator">
+                                  </td>
+                                  
+                                  <td>
+                                      <input type="text" class="resultDenominator">
+                                  </td>
+                              </tr>
+                          </table>
+                          <button class="btn btn-primary" id="countFrAd">
                               Check!
                           </button>
                           <output class="isPrimeResult"></output>
