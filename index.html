@@ -50,8 +50,14 @@
                     <div class="panel-heading"><h2>Fractions (addition and substraction of fractions)</h2></div>
                     <div class="panel-body">
                         <p>To add or subtract fractions we first rewrire each fraction so that they all have the same denominator(this is known as <span class="text-danger">common denominator</span>). The denominator is chosen to be the lowest common multiple of the original denominators. Then the numerators are added or substracted as apprpriate, and the result is divided by a common denominator.</p>
-                        <!-- <div class="bg-info">EX: <span class="frac"><sup>2</sup>&frasl;<sub>3</sub> + <sup>5</sup>&frasl;<sub>4</sub> = <sup>8</sup>&frasl;<sub>12</sub> + <sup>15</sup>&frasl;<sub>12</sub> = <sup>8 + 15</sup>&frasl;<sub>12</sub>  = <sup>23</sup>&frasl;<sub>12</sub></span></div> -->
+                    
                         <div class="bg-info">EX: <span class="frac"><span class="sup">2</span><span class="sub">3</span> <span class="operator">+</span> <span class="sup">5</span><span class="sub">4</span> <span class="operator"> = </span> <span class="sup">8</span><span class="sub two-dig">12</span> <span class="operator">+</span> <span class="sup">15</span><span class="sub two-dig">12</span> <span class="operator">=</span> <span class="sup two-dig">8 + 15</span><span class="sub three-dig">12</span> <span class="operator"> = </span> <span class="sup">23</span><span class="sub two-dig">12</span></span></div>
+                        <hr>
+
+                        <p>The product of two or more fractions is found by multiplying their numerators to form a new numerator, and then multiplying their denominators to form a new denominator.</p>
+                       
+                        <div class="bg-info">EX: <span class="frac"><span class="sup">4</span><span class="sub">9</span> <span class="operator">*</span> <span class="sup">3</span><span class="sub">8</span> <span class="operator"> = </span> <span class="sup">12</span><span class="sub two-dig">72</span> = <span class="sup">1</span><span class="sub">6</span>
+                        </div>
                     </div>
                     <div class="panel-footer">
                     <!-- fraction addition -->
@@ -135,6 +141,51 @@
                             </tr>
                         </table>
                         <button class="btn btn-primary" id="countFrSub">
+                            Check!
+                        </button>
+                        <button class="btn btn-danger" class="clearForm">
+                            Clear
+                        </button>
+                    </form>
+
+                    <!-- fraction multiplication -->
+
+                    <h3>Multiplication</h3>
+                    <form id="fractionMultiplication">
+                        <table class="fraction">
+                            <tr>
+                                <td>
+                                    <input type="text" class="firstNumerator">
+                                </td>
+                                <td class="operator" rowspan="2">
+                                    *
+                                </td>
+
+                                <td>
+                                    <input type="text" class="secondNumerator">
+                                </td>
+                                <td class="operator" rowspan="2">
+                                    =
+                                </td>
+                                <td>
+                                    <input type="text" class="resultNumerator">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="firstDenominator">
+                                </td>
+                                  
+                                <td>
+                                    <input type="text" class="secondDenominator">
+                                </td>
+                                  
+                                <td>
+                                    <input type="text" class="resultDenominator">
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="btn btn-primary" id="countFrMult">
                             Check!
                         </button>
                         <button class="btn btn-danger" class="clearForm">

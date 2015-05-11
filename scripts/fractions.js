@@ -2,7 +2,7 @@ $(function() {
 
     function obtainFraction(num, den) {
         var result = [];
-        for(var i = 0; i < num; i++) {
+        for(var i = 0; i <= num; i++) {
             if(num % i == 0 && den % i == 0) {
                 result.unshift(num / i);
                 result.unshift(den / i);
@@ -71,6 +71,17 @@ $(function() {
         return fraction;
     }
 
+    function multiplyFractionAndGetResult(firstNumerator, secondNumerator, firstDenominator, secondDenominator) {
+        var numerator = firstNumerator * secondNumerator;
+        var denominator = firstDenominator * secondDenominator;
+        var resultOfMultiplication = obtainFraction(numerator, denominator);
+        console.log(numerator, denominator, resultOfMultiplication);
+        $("#fractionMultiplication .resultNumerator").val(resultOfMultiplication[1]);
+        $("#fractionMultiplication .resultDenominator").val(resultOfMultiplication[0]);
+
+
+    }
+
     // fraction(addition)
     $('#countFrAd').on('click', function(e) {
         e.preventDefault();
@@ -93,6 +104,17 @@ $(function() {
 
         var resultFraction = findCommonDenominatorAndChangeNumeratorsIfNeed(firstNumerator, secondNumerator, firstDenominator, secondDenominator);
         subtractNumeratorsAndShowResult(resultFraction.firstNumerator, resultFraction.secondNumerator, resultFraction.denominator);
+    });
+
+    // fraction(multiplication)
+    $('#countFrMult').on('click', function(e) {
+        e.preventDefault();
+        var firstNumerator = parseInt($('#fractionMultiplication .firstNumerator').val());
+        var secondNumerator = parseInt($('#fractionMultiplication .secondNumerator').val());
+        var firstDenominator = parseInt($('#fractionMultiplication .firstDenominator').val());
+        var secondDenominator = parseInt($('#fractionMultiplication .secondDenominator').val());
+
+        multiplyFractionAndGetResult(firstNumerator, secondNumerator, firstDenominator, secondDenominator);
     });
 
     $('.clearForm').on('click', function(e) {
