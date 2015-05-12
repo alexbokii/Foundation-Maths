@@ -71,15 +71,26 @@ $(function() {
         return fraction;
     }
 
-    function multiplyFractionAndGetResult(firstNumerator, secondNumerator, firstDenominator, secondDenominator) {
+    function multiplyFractionAndReturnResult(firstNumerator, secondNumerator, firstDenominator, secondDenominator) {
         var numerator = firstNumerator * secondNumerator;
         var denominator = firstDenominator * secondDenominator;
         var resultOfMultiplication = obtainFraction(numerator, denominator);
-        console.log(numerator, denominator, resultOfMultiplication);
-        $("#fractionMultiplication .resultNumerator").val(resultOfMultiplication[1]);
-        $("#fractionMultiplication .resultDenominator").val(resultOfMultiplication[0]);
 
+        var result = {
+            num: resultOfMultiplication[1],
+            den: resultOfMultiplication[0]
+        }
+        return result;
+    }
 
+    function showResultOfMultiplication(num, den) {
+        $("#fractionMultiplication .resultNumerator").val(num);
+        $("#fractionMultiplication .resultDenominator").val(den);
+    }
+
+    function showResultOfDivision(num, den) {
+        $("#fractionDivision .resultNumerator").val(num);
+        $("#fractionDivision .resultDenominator").val(den);
     }
 
     // fraction(addition)
@@ -114,7 +125,22 @@ $(function() {
         var firstDenominator = parseInt($('#fractionMultiplication .firstDenominator').val());
         var secondDenominator = parseInt($('#fractionMultiplication .secondDenominator').val());
 
-        multiplyFractionAndGetResult(firstNumerator, secondNumerator, firstDenominator, secondDenominator);
+        var result = multiplyFractionAndReturnResult(firstNumerator, secondNumerator, firstDenominator, secondDenominator);
+
+        showResultOfMultiplication(result.num, result.den);
+    });
+
+    // fraction(division)
+    $('#countFrDiv').on('click', function(e) {
+        e.preventDefault();
+        var firstNumerator = parseInt($('#fractionDivision .firstNumerator').val());
+        var secondNumerator = parseInt($('#fractionDivision .secondNumerator').val());
+        var firstDenominator = parseInt($('#fractionDivision .firstDenominator').val());
+        var secondDenominator = parseInt($('#fractionDivision .secondDenominator').val());
+
+        var result = multiplyFractionAndReturnResult(firstNumerator, secondDenominator, firstDenominator, secondNumerator);
+        showResultOfDivision(result.num, result.den);
+
     });
 
     $('.clearForm').on('click', function(e) {
